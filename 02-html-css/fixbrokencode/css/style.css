@@ -3,11 +3,11 @@ Theme Name: Busy Square
 Author: Big Square
 Version: 0.00001
 
-[Table Of Contents] 
+[Table Of Contents]
 
 	01- BODY
-	02- HEADERS 
-	03- GLOBAL STYLES 
+	02- HEADERS
+	03- GLOBAL STYLES
 	04- MAIN CONTENT
 	05- SOCIAL MEDIA
 	06- MISC
@@ -15,8 +15,8 @@ Version: 0.00001
 */
 
 
-/*----------------------------------------------------------------------------- 
-=01 BODY 
+/*-----------------------------------------------------------------------------
+=01 BODY
 -----------------------------------------------------------------------------*/
 
 body {
@@ -31,13 +31,13 @@ body {
 
 
 #container {
-	background: url(../images/background_light.jpg) no-repeat;	
+	background: url(../images/background_light.jpg) no-repeat;
 	width: 950px;
-	margin: 0 auto; /*centers our container on the page */   
+	margin: 0 auto; /*centers our container on the page */
 }
 
 
-/*----------------------------------------------------------------------------- 
+/*-----------------------------------------------------------------------------
 =02 HEADERS
 -----------------------------------------------------------------------------*/
 
@@ -46,19 +46,19 @@ body {
 	padding: 20px 0px;
 }
 
-	
+
 	#logo {
 		background: url(../images/logo.png) no-repeat;
 		width: 275px;
 		height: 76px;
 	}
-	
+
 		#logo h1 {
 			text-indent: -99999em;	/* hides the H1 tag from the page, while semantically keeping it present in your HTML */
 		}
 
-/*----------------------------------------------------------------------------- 
-=03 GLOBAL STYLES 
+/*-----------------------------------------------------------------------------
+=03 GLOBAL STYLES
 -----------------------------------------------------------------------------*/
 
 h2 {
@@ -75,11 +75,15 @@ a {
 	text-decoration:none;
 }
 
-p { margin: 0px 0px 15px 0px; } /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
+p {
+	margin: 0px 0px 15px 0px;
+  line-height: 1.35;
+	letter-spacing: 1px;
+} /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
 
 
-/*----------------------------------------------------------------------------- 
-=04 NAV 
+/*-----------------------------------------------------------------------------
+=04 NAV
 -----------------------------------------------------------------------------*/
 
 nav {
@@ -91,23 +95,22 @@ nav {
 
 
 	nav ul li {
-		float: left;
-		display: inline;
-		margin-right: 20px;	
+		display: inline-block;
+		margin-right: 20px;
 	}
 
-		
+
 	nav li a {
 		display: block;
 		width: 100px;
 		padding: 10px 0px;
-		
+
 	}
 
 
 
-/*----------------------------------------------------------------------------- 
-=05 SOCIAL MEDIA  
+/*-----------------------------------------------------------------------------
+=05 SOCIAL MEDIA
 -----------------------------------------------------------------------------*/
 
 
@@ -120,7 +123,7 @@ nav {
 	 display:inline-block;
 	 width:60px;
 	 height:60px;
-	 background:blue;	
+	 background:blue;
 	 text-indent:-9999em;
 }
 
@@ -128,45 +131,45 @@ nav {
 	background:url(../images/socialNav.png) 0px 64px;
 }
 #socialMedia ul li.twitter {
-	background:url(../images/socialNav.png) -60px 64px; 
+	background:url(../images/socialNav.png) -60px 64px;
 }
 
 #socialMedia ul li.facebook {
-	background:url(../images/socialNav.png) -120px 64px; 
+	background:url(../images/socialNav.png) -120px 64px;
 }
 
 #socialMedia ul li.rss {
-	background:url(../images/socialNav.png) -180px 64px; 
+	background:url(../images/socialNav.png) -180px 64px;
 }
 
 
 
 #socialMedia ul li.linkedIn:hover {
-	background:url(../images/socialNav.png) 0px 0px; 
+	background:url(../images/socialNav.png) 0px 0px;
 }
 
 #socialMedia ul li.twitter:hover {
-	background:url(../images/socialNav.png) -60px 0px; 
+	background:url(../images/socialNav.png) -60px 0px;
 }
 
 #socialMedia ul li.facebook:hover {
-	background:url(../images/socialNav.png) -120px 0px; 
+	background:url(../images/socialNav.png) -120px 0px;
 }
 
 #socialMedia ul li.rss:hover {
-	background:url(../images/socialNav.png) -180px 0px; 
+	background:url(../images/socialNav.png) -180px 0px;
 }
 
 
 
 
-/*----------------------------------------------------------------------------- 
-=06 MISC 
+/*-----------------------------------------------------------------------------
+=06 MISC
 -----------------------------------------------------------------------------*/
 
 
 .clear {
-	clear: both;	
+	clear: both;
 }
 
 .imgright {
@@ -175,11 +178,10 @@ nav {
 }
 
 .imgleft {
-	float: left; 
+	float: left;
 	margin: 0 10px 10px 0;
 }
 
 .imgborder {
-	border: 5px solid #CCC;	
+	border: 5px solid #CCC;
 }
-
