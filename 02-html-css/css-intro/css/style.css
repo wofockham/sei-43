@@ -1,0 +1,43 @@
+/*
+
+selector {
+  property: value;
+  other-property: other-value;
+  further-property: multiple values;
+}
+
+*/
+
+body {
+  background-color: pink;
+}
+
+h1 {
+  color: red;
+  text-align: right;
+  font-size: 400%;
+}
+
+a {
+  color: #206c20; /* Hexcodes: #000000 - #ffffff: #rrggbb */
+}
+
+/* More complicated selectors */
+
+/* Select multiple elements at once */
+h1, h2, h3, h4, h5, h6 {
+  background-color: white;
+  text-align: center;
+  text-shadow: 0 0 6px black;
+  padding: 40px;
+}
+
+/* Tagname selector */
+img {
+  width: 33%;
+}
+
+/* Class selector */
+img.featured {
+  width: 100%;
+}
