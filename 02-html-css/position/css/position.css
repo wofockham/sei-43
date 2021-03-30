@@ -1,0 +1,62 @@
+body {
+  background-color: aliceblue;
+  min-height: 999999px;
+}
+
+.box {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 300px;
+}
+
+.static {
+  position: static;
+}
+
+.absolute {
+  position: absolute;
+  top: 300px;
+  right: 300px;
+}
+
+.fixed {
+  position: fixed;
+  top: 300px;
+  right: 300px;
+}
+
+.relative {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  line-height: 900px;
+}
+
+.small-box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.red {
+  background-color: red;
+  top: 275px;
+  right: 175px;
+}
+
+.green {
+  background-color: green;
+  top: 300px;
+  right: 200px;
+  z-index: 1;
+}
+
+.blue {
+  background-color: blue;
+  top: 325px;
+  right: 225px;
+}
