@@ -1,0 +1,12 @@
+body {
+  background-color: green;
+  background-image: url(/img/money.jpg);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 90vh;
+  padding: 1em;
+}
