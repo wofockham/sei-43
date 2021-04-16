@@ -1,0 +1,16 @@
+body {
+  background-color: pink;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  text-align: right;
+}
+
+.feature {
+  max-width: 100%;
+}
