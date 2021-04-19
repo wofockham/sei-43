@@ -6,6 +6,15 @@
   <img src="<%= @butterfly["image"] %>" alt="<%= @butterfly["name"] %>" class="feature">
 <% end %>
 
+<% unless @butterfly.plant.nil? %>
+  <h3>
+    Larval plant:
+    <a href="/plants/<%= @butterfly.plant.id %>">
+      <%= @butterfly.plant.name %>
+    </a>
+  </h3>
+<% end %>
+
 <div class="controls">
   <a href="/butterflies/<%= @butterfly["id"] %>/edit">Edit butterfly</a>
   <a href="/butterflies/<%= @butterfly["id"] %>/delete">Delete butterfly</a>

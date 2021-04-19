@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 require 'sqlite3'
+require 'pry'
 
 # Rails will do all this for you automatically:
 ActiveRecord::Base.establish_connection(
@@ -14,9 +15,11 @@ ActiveRecord::Base.logger = Logger.new(STDERR)
 
 # Models
 class Butterfly < ActiveRecord::Base
+  belongs_to :plant, :optional => true
 end
 
 class Plant < ActiveRecord::Base
+  has_many :butterflies
 end
 
 get '/' do
@@ -40,6 +43,7 @@ post '/butterflies' do
   butterfly.name = params[:name]
   butterfly.family = params[:family]
   butterfly.image = params[:image]
+  butterfly.plant_id = params[:plant_id]
   butterfly.save # butterfly.id is now available:
   redirect to("/butterflies/#{ butterfly.id }")
 end
@@ -62,6 +66,7 @@ post '/butterflies/:id' do
   butterfly.name = params[:name]
   butterfly.family = params[:family]
   butterfly.image = params[:image]
+  butterfly.plant_id = params[:plant_id]
   butterfly.save
   redirect to("/butterflies/#{ params[:id] }") # GET
 end
@@ -120,4 +125,10 @@ get '/plants/:id/delete' do
   plant = Plant.find params[:id]
   plant.destroy # DELETE
   redirect to('/plants')
+end
+
+################################################################################
+get '/pry' do # Take code like this out before you deploy it.
+  binding.pry
+  "Thank you for using pry -- please don't tell anyone about this URL"
 end
