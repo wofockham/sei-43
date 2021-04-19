@@ -6,4 +6,7 @@ class PagesController < ApplicationController
   def goodbye
     render :goodbye
   end
+
+  def funny
+  end
 end
