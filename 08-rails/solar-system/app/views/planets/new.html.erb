@@ -1,3 +1,35 @@
 <h2>New Planet</h2>
 
-<h3>Form coming at 2:11pm</h3>
+<form action="<%= planets_path %>" method="post">
+  <label>
+    Name:
+    <input name="name" required>
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image">
+  </label>
+
+  <label>
+    Orbit:
+    <input type="number" name="orbit">
+  </label>
+
+  <label>
+    Diameter:
+    <input type="number" name="diameter">
+  </label>
+
+  <label>
+    Mass:
+    <input type="number" name="mass">
+  </label>
+
+  <label>
+    Moons:
+    <input type="number" name="moons">
+  </label>
+
+  <button>Create planet</button>
+</form>

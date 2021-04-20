@@ -1,0 +1,35 @@
+<h2>Edit Planet</h2>
+
+<form action="<%= planet_path(@planet.id) %>" method="post">
+  <label>
+    Name:
+    <input name="name" required value="<%= @planet.name %>">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image" value="<%= @planet.image %>">
+  </label>
+
+  <label>
+    Orbit:
+    <input type="number" name="orbit" value="<%= @planet.orbit %>">
+  </label>
+
+  <label>
+    Diameter:
+    <input type="number" name="diameter" value="<%= @planet.diameter %>">
+  </label>
+
+  <label>
+    Mass:
+    <input type="number" name="mass" value="<%= @planet.mass %>">
+  </label>
+
+  <label>
+    Moons:
+    <input type="number" name="moons" value="<%= @planet.moons %>">
+  </label>
+
+  <button>Update planet</button>
+</form>

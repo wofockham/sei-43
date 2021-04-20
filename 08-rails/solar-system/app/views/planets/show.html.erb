@@ -1,6 +1,6 @@
 <h2><%= @planet.name %></h2>
 
-<h3>Image coming soon</h3>
+<%= image_tag @planet.image, :class => 'feature' if @planet.image.present? %>
 
 <ul>
   <li>Name: <%= @planet.name %></li>
@@ -9,3 +9,8 @@
   <li>Mass: <%= @planet.mass %></li>
   <li>Moons: <%= @planet.moons %></li>
 </ul>
+
+<div class="controls">
+  <%= link_to 'Edit planet', edit_planet_path(@planet.id) %>
+  <%= button_to 'Delete planet',  planet_path(@planet.id), :method => 'delete' %>
+</div>
