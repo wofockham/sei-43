@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'Numbers', numbers_path %>
+      <%= link_to 'Text', text_path %>
+      <%= link_to 'Assets', assets_path %>
+      <%= link_to 'URL', url_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
