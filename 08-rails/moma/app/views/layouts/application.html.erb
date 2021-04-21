@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <nav>
+        <%= link_to 'Artists', artists_path %>
+        <%= link_to 'New Artist', new_artist_path %>
+      </nav>
+      <%= yield %>
+    </div>
   </body>
 </html>

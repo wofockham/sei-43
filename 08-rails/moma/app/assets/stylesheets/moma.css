@@ -9,3 +9,12 @@ body {
 .feature {
   max-height: 30em;
 }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  text-align: right;
+}
