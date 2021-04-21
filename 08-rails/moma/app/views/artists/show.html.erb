@@ -7,3 +7,8 @@
   <li>Date of birth: <%= @artist.dob.strftime '%A, %B %e, %Y' if @artist.dob.present? %></li>
   <li>Period: <%= @artist.period %></li>
 </ul>
+
+<div class="controls">
+  <%= link_to 'Edit artist', edit_artist_path(@artist) %>
+  <%= link_to 'Delete artist', @artist, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
