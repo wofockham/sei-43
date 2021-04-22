@@ -1,0 +1,5 @@
+<% if @current_user.present? %>
+  <p>Hey, you are logged in as <%= @current_user.email %></p>
+<% else %>
+  <p>You are not logged in</p>
+<% end %>
