@@ -12,7 +12,10 @@
   <%= f.text_field :style %>
 
   <%= f.label :image %>
-  <%= f.url_field :image %>
+  <%= f.url_field :image, :required => true %>
+
+  <%= f.label :artist_id %>
+  <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
 
   <%= f.submit %>
 <% end %>
