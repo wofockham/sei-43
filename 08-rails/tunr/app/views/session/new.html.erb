@@ -1,5 +1,9 @@
 <h1>Log In</h1>
 
+<% if flash[:error_message] %>
+  <h2><%= flash[:error_message] %></h2>
+<% end %>
+
 <%= form_tag login_path do %>
   <%= label_tag :email %>
   <%= email_field_tag :email %>

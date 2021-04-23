@@ -13,6 +13,7 @@
 
     <nav>
       <% if @current_user.present? %>
+        <%= link_to "New mixtape", new_mixtape_path %>
         <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
       <% else %>
         <%= link_to "Sign up", new_user_path %>
