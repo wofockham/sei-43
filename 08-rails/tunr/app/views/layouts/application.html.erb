@@ -5,23 +5,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-    <nav>
-      <% if @current_user.present? %>
-        <%= link_to "Users", users_path if @current_user.admin? %>
-        <%= link_to "New mixtape", new_mixtape_path %>
-        <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
-      <% else %>
-        <%= link_to "Sign up", new_user_path %>
-        <%= link_to "Sign in", login_path %>
-      <% end %>
-    </nav>
+    <div class="container">
+      <nav>
+        <% if @current_user.present? %>
+          <%= link_to "Users", users_path if @current_user.admin? %>
+          <%= link_to "New mixtape", new_mixtape_path %>
+          <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+        <% else %>
+          <%= link_to "Sign up", new_user_path %>
+          <%= link_to "Sign in", login_path %>
+        <% end %>
+      </nav>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
