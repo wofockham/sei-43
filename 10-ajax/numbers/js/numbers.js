@@ -6,12 +6,15 @@ const fetchFact = function () {
       return; // Not ready yet.
     }
 
+    // Convert the text from the API into a JS data structure.
+    const data = JSON.parse(xhr.responseText);
+
     const p = document.createElement('p'); // detached DOM node
-    p.innerHTML = xhr.responseText;
+    p.innerHTML = data.text;
     document.body.appendChild(p);
   };
 
-  xhr.open('GET', 'http://numbersapi.com/random/trivia');
+  xhr.open('GET', 'http://numbersapi.com/random/trivia?json');
   xhr.send(); // asynchronous
 };
 
