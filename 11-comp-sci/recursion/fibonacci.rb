@@ -29,6 +29,28 @@ end
 # Make this faster but still recursive:
 
 # Option a: memoisation
-# Option b: iterative recursion: only recurse once.
+# Option b: iterative recursion: only recurse once
+
+def fib_memo(n)
+  @fib ||= {}
+
+  if @fib[n]
+    @fib[n]
+  elsif n == 1 || n == 2
+    1
+  else
+    @fib[n] = fib_memo(n-1) + fib_memo(n-2)
+  end
+end
+
+# Iterative recursion
+def fib(n, a=1, b=1)
+  if n == 1 || n == 2
+    b
+  else
+    fib n-1, b, a+b # mystical
+  end
+end
+
 
 binding.pry
