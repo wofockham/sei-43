@@ -1,12 +1,9 @@
-import Clock from './Clock';
-import Echo from './Echo';
-
+import FlickrSearch from './FlickrSearch';
 
 function App() {
   return (
     <div className="App">
-      <Clock />
-      <Echo sponsor="Facebook"  />
+      <FlickrSearch />
     </div>
   );
 }
