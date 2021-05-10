@@ -21,7 +21,7 @@ class Echo extends Component {
   render() {
     return (
       <div>
-        <p>{ this.state.message }</p>
+        <p>{ this.state.message || 'some default' }</p>
 
         <input onChange={ this._updateMessage } value={ this.state.message } />
 
