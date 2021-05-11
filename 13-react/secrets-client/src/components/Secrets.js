@@ -11,8 +11,9 @@ class Secrets extends Component {
       secrets: []
     };
 
+    // TODO: continuously fetch new secrets
     axios.get(SERVER_URL).then((results) => {
-      console.log( results.data ); // WE ARE NEARLY FINISHED!
+      this.setState({ secrets: results.data });
     });
 
     this.saveSecret = this.saveSecret.bind(this);
