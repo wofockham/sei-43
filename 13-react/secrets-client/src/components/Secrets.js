@@ -1,33 +1,35 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const SERVER_URL = 'http://localhost:3000/secrets.json';
+// const SERVER_URL = 'http://localhost:3000/secrets.json';
+const SERVER_URL = 'http://d598fe4eaead.ngrok.io/secrets.json';
 
 class Secrets extends Component {
   constructor() {
     super();
-    // TODO: fetch these via AJAX
     this.state = {
       secrets: []
     };
 
-    // TODO: continuously fetch new secrets
-    axios.get(SERVER_URL).then((results) => {
-      this.setState({ secrets: results.data });
-    });
-
     this.saveSecret = this.saveSecret.bind(this);
   }
 
-  saveSecret(content) {
-    // TODO: save new secrets via AJAX
-    const secret = {
-      id: Math.random(), // TODO: get an actual ID from the database
-      content: content
+  componentDidMount() {
+    // Polling:
+    const fetchSecrets = () => {
+      axios.get(SERVER_URL).then((results) => {
+        this.setState({ secrets: results.data });
+        setTimeout(fetchSecrets, 4000); // recursion: setInterval is a luxury
+      });
     };
+    fetchSecrets();
+  }
 
-    // Add a new secret to the collection of secrets without mutation.
-    this.setState({ secrets: [...this.state.secrets, secret]});
+  saveSecret(content) {
+    axios.post(SERVER_URL, { content: content }).then((response) => {
+      // Add a new secret to the collection of secrets without mutation.
+      this.setState({ secrets: [...this.state.secrets, response.data]});
+    })
   }
 
   render() {
