@@ -1,0 +1,73 @@
+// Variables:
+$brand-color: limegreen;
+$centered: 0 auto;
+
+// "Function"
+// Mixins: collect properties and values:
+@mixin fancyText {
+  font-style: italic;
+  color: grey;
+  text-decoration: underline;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $brand-color;
+}
+
+h1 {
+  text-align: center;
+}
+
+// Nesting:
+.post {
+  max-width: 960px;
+  margin: $centered;
+  margin-bottom: 3em;
+  border-bottom: 1px solid black;
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+
+  h2 {
+    @include fancyText;
+  }
+
+  h3.author {
+    text-align: right;
+  }
+
+  .content {
+    border: 1px solid $brand-color;
+    padding: 1em;
+    border-radius: 0.5em;
+
+    p {
+      font-size: 120%;
+    }
+  }
+}
+
+// Inheritance:
+.notification {
+  border: 1px solid black;
+  border-radius: 0.5em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: blue;
+  padding: 1em;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.error {
+  @extend .notification;
+  color: red;
+}
+
+.success {
+  @extend .notification;
+  color: green;
+}
