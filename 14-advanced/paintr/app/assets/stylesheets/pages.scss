@@ -1,0 +1,19 @@
+.swatch {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+
+.swatch.selected {
+  box-shadow: 0 0 10px limegreen;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  float: left; // Let us never speak of this again
+}

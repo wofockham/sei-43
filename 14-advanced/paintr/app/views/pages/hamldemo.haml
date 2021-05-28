@@ -1,0 +1,23 @@
+%h1.heading.friday#breaking HAML Demo
+%p Welcome to the HAML demo
+
+/ Simple expressions
+%h2.food= 'hotdogs' * 11
+
+/ Interpolation if you want text and a value
+%h3= "Your lucky number is #{ @lucky }"
+
+%div.container
+  %p Indentation allows nesting
+  %p
+    %span Here is a span
+
+%label
+  = "Name"
+  %input
+
+%ul
+  - %w( Groucho Harpo Chico Zeppo Gummo ).each do |brother|
+    %li= brother
+
+%p HAML knows where to close a block based on your indentation.
