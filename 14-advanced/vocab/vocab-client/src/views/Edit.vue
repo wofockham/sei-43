@@ -22,7 +22,7 @@ export default {
   methods: {
     async createOrUpdate(word) {
       await api.updateWord(word);
-      alert('Word updated successfully!');
+      this.flash('Word updated', 'success');
       this.$router.push(`/words/${ word._id }`); // redirect to show.
     }
   },
