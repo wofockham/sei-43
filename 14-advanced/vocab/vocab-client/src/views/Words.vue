@@ -14,7 +14,11 @@
         <tr v-for="(word, i) in words" :key="i">
           <td>{{ word.english }}</td>
           <td>{{ word.german }}</td>
-          <td width="75" class="center aligned">Show</td>
+          <td width="75" class="center aligned">
+            <router-link :to="{ name: 'show', params: { id: word._id } }">
+              Show
+            </router-link>
+          </td>
           <td width="75" class="center aligned">Edit</td>
           <td width="75" class="center aligned">Destroy</td>
         </tr>
