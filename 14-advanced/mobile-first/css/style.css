@@ -1,0 +1,83 @@
+/* IRL: normalise.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.5em;
+  min-height: 80vh;
+}
+
+header {
+  background-color: #890b59;
+  color: #fff;
+  text-align: center;
+  padding: 0.8em 1em;
+  font-size: 1.5em;
+}
+
+nav {
+  background-color: #5e023b;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #fff;
+  padding: 1em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+aside > div {
+  background-color: #e3e5f9;
+  padding: 0.5em;
+}
+
+footer {
+  color: #fff;
+  background-color: #aab2f7;
+  text-align: right;
+  padding: 0.5em;
+}
+
+@media (min-width: 540px) {
+  nav {
+    display: block;
+  }
+
+  aside {
+    display: flex;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    display: flex;
+  }
+
+  main {
+    flex-basis: 0;
+    flex-grow: 2; /* 2/3rds */
+  }
+
+  aside {
+    flex-basis: 0;
+    flex-grow: 1; /* 1/3rd */
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  aside {
+    display: flex;
+  }
+}
